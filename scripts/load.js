@@ -34,29 +34,6 @@ function readFile (evt) {
 
 		var lines = temp.split("\n");
 		
-		if(lines.length !< 90)
-		{
-			alert("ERROR: Corrupt Candysave Lines: " + lines.length);
-			console.log("ERROR: Corrupt Candysave Lines: " + lines.length); 
-			return null;
-		}
-		
-		for (var i = 0; i < lines.length; i++) {
-			
-			var split = lines[i].split(": ");
-			
-			if(split.length != 2)
-			{
-				alert("ERROR: Corrupt Candysave @Line #" + (i+1));
-				console.log("ERROR: Corrupt Candysave @Line #" + (i+1)); 
-				return null;
-			}
-			
-			console.log(split[1] + " | " + i); 
-			
-			var_list.push(split[1]);
-
-		}
 		
 		//reset all
 		cookie.eraseCookie("CandyCookie");
