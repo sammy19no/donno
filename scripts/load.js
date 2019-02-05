@@ -34,7 +34,7 @@ function readFile (evt) {
 
 		var lines = temp.split("\n");
 		
-		if(lines.length != 90)
+		if(lines.length !< 90)
 		{
 			alert("ERROR: Corrupt Candysave Lines: " + lines.length);
 			console.log("ERROR: Corrupt Candysave Lines: " + lines.length); 
